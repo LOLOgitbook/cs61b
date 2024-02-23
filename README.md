@@ -196,6 +196,35 @@ public static Dog maxDog(Dog d1, Dog d2) {
 }
 ```
 
+调用方法
+
+```
+Dog d = new Dog(15);
+Dog d2 = new Dog(100);
+Dog.maxDog(d, d2);
+```
+
+第二种方法是通过non-static method, 注意这里没有static了
+
+```
+public Dog maxDog(Dog d2) {
+    if (this.weightInPounds > d2.weightInPounds) {
+        return this;
+    }
+    return d2; 
+}
+```
+
+调用方法
+
+```
+Dog d = new Dog(15);
+Dog d2 = new Dog(100);
+d.maxDog(d2);
+```
+
+
+
 
 
 
