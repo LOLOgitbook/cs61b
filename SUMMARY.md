@@ -1,3 +1,3 @@
 # Table of contents
 
-* [1.1 Essentials](README.md)
+* [1. Introduction to Java](README.md)
