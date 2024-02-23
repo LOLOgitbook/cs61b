@@ -156,17 +156,45 @@ public class DogArrayDemo {
         Dog[] dogs = new Dog[2];
         dogs[0] = new Dog(8);
         
+        dogs[0].makeNoise();
     }
 }
 ```
 
 main()方法的参数是一个String对象的数组。args，Java编译器要求必须这样写，因为args要用来存储命令行参数。
 
+`new` 这个关键字可以用于两种方式，第一个是 创建一个array（包括2个dog 对象），用\[]，第二个是创建一个真实的狗，用()
 
+## Class Methods vs. Instance Methods
 
+Java 定义2种methods
 
+* 类method, 静态方法
+* 例method, 非静态
 
+Instance methods 是类的特别例子。类methods是类自己。
 
+比如一个静态的例子， `math`类提供`sqrt` method:
+
+```
+x = Math.sqrt(100);
+
+Math m = new Math();
+x = m.sqrt(100);
+```
+
+比如一个类里包含instance methods 和 static methods.
+
+我们想比较两种狗，一个方法是通过static method
+
+```
+public static Dog maxDog(Dog d1, Dog d2) {
+    if (d1.weightInPounds > d2.weightInPounds) {
+        return d1;
+    }
+    return d2;
+}
+```
 
 
 
