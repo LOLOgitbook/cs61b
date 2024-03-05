@@ -4,3 +4,4 @@
 * [2. Lists](2.-lists.md)
 * [Project 1: Data Structures](project-1.md)
 * [disc 03](disc-03.md)
+* [lab 2](lab-2.md)
