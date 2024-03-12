@@ -1,231 +1,86 @@
-# 1. Introduction to Java
+# 提交作业和配置gith
 
-## 1.1 Essentials <a href="#running-a-java-program" id="running-a-java-program"></a>
+## Configure Personal Repository
 
-## Running a Java Program <a href="#running-a-java-program" id="running-a-java-program"></a>
+#### Configure Personal Repository&#x20;
 
-1. javac HelloWorld.java
-2. java HelloWorld
+Now, it’s time to clone your personal repository. As you did with the libraries, navigate to the folder where you would like to keep your repository. We recommend that it’s the same folder as where you stored your Java libraries (for example, `cs61b`).
 
-## Variables and Loops
-
-1. variables 使用前需要先声明一个类型
-2. loop 的内容需要用{}括起来，判断用()括起来
-3. System.out.print不会另起一行，System.out.println会另起一行
-
-## Static Typing
-
-静态变量属于类，不属于类中任何一个对象，因此**静态变量又叫做类变量**，一个类不管创建多少个对象（对象是类的一个实例），**静态变量在内存中有且仅有一个**。
-
-## Defining Functions in Java
-
-对于java，我们必须定义functions 是属于哪个class的。Functions 是class 的一部分，称为"method"。
-
-我们可以用  `public static` 声明，和python 里的 `def` 类似。
-
-## Code Style, Comments, Javadoc
-
-规范很重要
-
-## Comments
-
-写代码 self-documenting，描述自己的代码是什么功能，可以遵循Javadoc格式。比如，使用`/**` 。
-
-
-
-## 1.2 Objects
-
-### Defining and Using Classes
-
-### static Methods
-
-所有的代码写在methods里
-
-```java
-public class Dog {
-    public static void makeNoise() {
-        System.out.println("Bark!");
-    }
-}
-```
-
-会报错，因为dog class 没有坐任何事情。要想让Dog class运行，要不就加一个main method， 或者可以create一个 `DogLauncher class`用来运行Dog Class 中的methonds.
-
-```java
-public class DogLauncher {
-    public static void main(String[] args) {
-            Dog.makeNoise();
-        } 
-    }
-```
-
-一个类型用另一个类型，通常称为这个类型的client，比如`DogLauncher`就是Dog的Client。
-
-### Instance Variables and Object Instantiation
-
-不是所有的狗都是一样的，需要为每个类型的狗来创建一个自己的不同的class。
-
-```javascript
-public class TinyDog {
-    public static void makeNoise() {
-        System.out.println("yip");
-        }
-}
-public class MalamuteDog{
-    public static void makeNoise() {
-        System.out.println("aroo");        
-    }
-}
-```
-
-```java
-public class DogLauncher {
-    public static void main(String[] args) {
-        Dog d;
-        d = new Dog();
-        d.weightInPounds = 20;
-        d.makeNoise();
-    }
-}
-```
-
-classes 可以用来实例化，实例包括data。使得dog的行为取决于properties，因为我们把狗实例化。
-
-* 对象是class的一个实例化
-* dog class 有自己的变量，叫作instance variables 或者是non-static variables。这些必须在class里声明，python和matlab可以在任何地方添加variables.
-* 为了调用 `makeNoise` method, 我们首先用new实例化Dog，然后make a specific Dog bark。也就是说我们用 d.makeNoise 而不是 Dog.makeNoise()
-* 一旦一个对象（object)被实例化，可以分配一个已声明的变量。d = new Dog();
-* 变量和方法也称作class 的members
-* 一个class的members用dot 符号表示
-
-## Constructors in java
-
-对于面向对象编程，用constructor 来构建objects
+Before we do clone your repo though, we need to login to Github. Verify that you have the Github package:
 
 ```
-public class DogLauncher {
-    public static void main(String[] args) {
-        Dog d = new Dog(20);
-        d.makeNoise();    
-    }
-}
+gh --version
 ```
 
-下面，实例被参数化，需要加一个constructor 到 Dog class
+You should see a version number displayed. If you instead see a command not found error, please install Github cli again by following the steps outlined for you [operating system](https://fa23.datastructur.es/materials/lab/lab01/#task-installing-software).
 
-```java
-public class Dog {
-    public int weightInPounds;
-    
-    public Dog(int w) {
-        weightInPounds = w;
-    }
-    public void makeNoise() {
-        if (weightInPounds < 10) {
-            System.out.println("yipy");
-        } else if (weightInPounds < 30) {
-            System.out.println("bark");
-        } else {
-            System.out.println("woof");
-        }
-    }
-}
-```
-
-这个constructor 有一个public Dog(int w) 类似于 python `__init__` ,当用 `new` 关键字和 一个整数参数的时候，创建一个新的Dog。
-
-## Array Instantiation, Arrays of objects
-
-arrays 可以通过 `new` 关键字实例化
-
-```java
-public class ArrayDemo {
-    public static void main(String[] args) {
-        int[] someArray = new int[5];
-        someArray[0] = 3;
-        someArray[1] = 4;
-    }
-}
-```
-
-同样
+Next login with your account with the following command:
 
 ```
-public class DogArrayDemo {
-    public static void main(String[] args) {
-        Dog[] dogs = new Dog[2];
-        dogs[0] = new Dog(8);
-        
-        dogs[0].makeNoise();
-    }
-}
+gh auth login
 ```
 
-main()方法的参数是一个String对象的数组。args，Java编译器要求必须这样写，因为args要用来存储命令行参数。
+You’ll be asked a few questions with some options to select from. You don’t have to worry about them, simply select the first options for all of them and proceed. You’ll be provided with a one time code, and prompted to open the browser.
 
-`new` 这个关键字可以用于两种方式，第一个是 创建一个array（包括2个dog 对象），用\[]，第二个是创建一个真实的狗，用()
+Enter the code in the browser window and select authorize Github. You should now be logged in!
 
-## Class Methods vs. Instance Methods
+**NOTE**: For Windows Users: if you run into an error that says “could not prompt: Incorrect Function”, run `winpty gh auth login` instead.
 
-Java 定义2种methods
+The entire process should look like the below:
 
-* 类method, 静态方法
-* 例method, 非静态
+**Once you’ve logged in, run the following command to clone your personal repository.** Make sure to replace the `***` with your class repository number (you can find this repo number on Beacon).
 
-Instance methods 是类的特别例子。类methods是类自己。
-
-比如一个静态的例子， `math`类提供`sqrt` method:
+&#x20;**WARNING**: Do not place your repository inside the `library-fa23` folder. This will cause headaches in the future.
 
 ```
-x = Math.sqrt(100);
-
-Math m = new Math();
-x = m.sqrt(100);
+git clone https://github.com/Berkeley-CS61B-Student/fa23-s***.git
 ```
 
-比如一个类里包含instance methods 和 static methods.
+&#x20;**INFO**: After cloning your terminal will report `warning: You appear to have cloned an empty repository.` This is not an issue, it is just git letting you know that there are no files in the repo.
 
-我们想比较两种狗，一个方法是通过static method
-
-```
-public static Dog maxDog(Dog d1, Dog d2) {
-    if (d1.weightInPounds > d2.weightInPounds) {
-        return d1;
-    }
-    return d2;
-}
-```
-
-调用方法
+Move into your newly created repo!
 
 ```
-Dog d = new Dog(15);
-Dog d2 = new Dog(100);
-Dog.maxDog(d, d2);
+cd fa23-s***
 ```
 
-第二种方法是通过non-static method, 注意这里没有static了
+Make sure that we’re working with the branch name we expect, `main`:
 
 ```
-public Dog maxDog(Dog d2) {
-    if (this.weightInPounds > d2.weightInPounds) {
-        return this;
-    }
-    return d2; 
-}
+git branch -M main
 ```
 
-调用方法
+**Now, we’ll add the `skeleton` remote repository.** We add starter code for the assignments to `skeleton`, and you will pull from it (please make sure you’re in your newly created repository before running this command!).
 
 ```
-Dog d = new Dog(15);
-Dog d2 = new Dog(100);
-d.maxDog(d2);
+git remote add skeleton https://github.com/Berkeley-CS61B/skeleton-fa23.git
 ```
 
+Listing the remotes should now show both the `origin` and `skeleton` remotes.
 
+```
+git remote -v
+```
 
+&#x20;**INFO**: If you see an error like `fatal: not a git repository` make sure you have properly moved into the `fa23-s***` directory using `cd`.
 
+&#x20;**TASK**: Follow the steps above to clone and configure your repository.
+
+<details>
+
+<summary><strong>At this point, your work space might look like this:</strong></summary>
+
+<img src="https://fa23.datastructur.es/materials/lab/lab01/img/workspace.png" alt="Workspace Image" data-size="original">
+
+* Note that this also assuming that you did your `lab01-checkoff` inside the same folder where you cloned your `fa23-s***` repository and `library-fa23`.
+* Your personal repository and libraries should be “separate”, such that you didn’t clone your `library-fa23` inside your personal repository or vise versa.
+* Your workspace doesn’t have to look like this exactly. This is mainly for an idea of what it can look like.
+
+</details>
+
+## 在 IntelliJ IDEA 中比较任何内容 <a href="#major-updates" id="major-updates"></a>
+
+[https://blog.jetbrains.com/zh-hans/idea/2022/07/compare-anything-in-intellij-idea/](https://blog.jetbrains.com/zh-hans/idea/2022/07/compare-anything-in-intellij-idea/)
 
 
 
