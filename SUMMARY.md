@@ -2,7 +2,9 @@
 
 ## 2024SpringCs61B
 
-* [Page 1](README.md)
+* [资料](README.md)
+* [week1](2024springcs61b/week1/README.md)
+  * [lecture](2024springcs61b/week1/lecture.md)
 
 ## 2021cs61b
 
