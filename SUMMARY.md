@@ -6,6 +6,7 @@
 * [week1](2024springcs61b/week1/README.md)
   * [lecture](2024springcs61b/week1/lecture.md)
 * [week2](2024springcs61b/week2.md)
+* [Page](2024springcs61b/page.md)
 
 ## 2021cs61b
 
