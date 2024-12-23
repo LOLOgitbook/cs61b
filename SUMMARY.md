@@ -1,8 +1,12 @@
 # Table of contents
 
+## CS61C
+
+* [Lec0](README.md)
+
 ## 2024SpringCs61B
 
-* [资料](README.md)
+* [资料](<README (1).md>)
 * [week1](2024springcs61b/week1/README.md)
   * [lecture](2024springcs61b/week1/lecture.md)
 * [week2](2024springcs61b/week2.md)
