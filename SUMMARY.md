@@ -3,6 +3,7 @@
 ## CS61C
 
 * [Lec0](README.md)
+* [Lec 1](cs61c/lec-1.md)
 
 ## 2024SpringCs61B
 
