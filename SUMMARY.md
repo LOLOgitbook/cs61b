@@ -5,15 +5,15 @@
 * [Lec0](README.md)
 * [Lec 1](cs61c/lec-1.md)
 
-## 2024SpringCs61B
+## 2024Cs61B
 
-* [资料](<README (1).md>)
-* [week1](2024springcs61b/week1/README.md)
-  * [lecture](2024springcs61b/week1/lecture.md)
-* [week2](2024springcs61b/week2.md)
-* [week3](2024springcs61b/week3/README.md)
-  * [Response	2. Scope, Static, Linked Lists, Arrays](2024springcs61b/week3/response-2.-scope-static-linked-lists-arrays.md)
-  * [Inheritance II: Extends, Casting, Higher Order Functions](2024springcs61b/week3/inheritance-ii-extends-casting-higher-order-functions.md)
+* [资料](2024cs61b/zi-liao.md)
+* [week1](2024cs61b/week1/README.md)
+  * [lecture](2024cs61b/week1/lecture.md)
+* [week2](2024cs61b/week2.md)
+* [week3](2024cs61b/week3/README.md)
+  * [Response	2. Scope, Static, Linked Lists, Arrays](2024cs61b/week3/response-2.-scope-static-linked-lists-arrays.md)
+  * [Inheritance II: Extends, Casting, Higher Order Functions](2024cs61b/week3/inheritance-ii-extends-casting-higher-order-functions.md)
 
 ## 2021cs61b
 
